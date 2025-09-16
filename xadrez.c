@@ -2,9 +2,9 @@
 
 int main (){
     //variáveis
-    int movimento1 = 1;
-    int movimento2 = 1;
-    int movimento3 = 1;
+    int movimentoT = 1;
+    int movimentoB = 1;
+    int movimentoR = 1;
     char peca1[10] = "Torre";
     char peca2[10] = "Bispo";
     char peca3[10] = "Rainha";
@@ -14,26 +14,23 @@ int main (){
     printf("Jogo de Xadres!!\n");
 
     //Movimento da rainha 8 vezes para a esquerda.
-    
-for (movimento3 = 1; movimento3 <= 16; movimento3++)
-{   
-    if (movimento3 % 2 == 0){
-    printf("%s moveu-se para a esquerda!\n", peca3);
-    movimento3++;}
-}
-    //movimentos da Torre cinco vezes para direita
-while (movimento1 <= 5)
-    {
-    printf("%s moveu-se para direita!\n",peca1);
-    movimento1++;
-    }
+    //movimentos da Torre cinco vezes para direita.
     //Movimentos do Bispo cinco vezes na diagonal.
+    
+for (movimentoT = 1; movimentoT <= 5; movimentoT++)
+{   
+    printf("%s moveu-se para a Direita!\n", peca1);
+}
+while (movimentoB <= 5)
+    {
+    printf("%s moveu-se para cima e à direita!\n", peca2);
+    movimentoB++;
+    }
 do
 {
-    printf("%s moveu-se para cima e à direita!\n", peca2);
-    movimento2++;
-} while (movimento2 <= 5);
-
+    printf("%s moveu-se para Esquerda!\n", peca3);
+    movimentoR++;
+} while (movimentoR <= 8);
         //Fim de Jogo
     return 0;
 }
